@@ -330,7 +330,20 @@ const Templates = () => {
   return (
     <div className="bg-gray-100 text-gray-800 min-h-screen p-6">
       <div className="max-w-screen-lg mx-auto py-8">
-        <h1 className="text-4xl font-bold text-blue-800 mb-10 text-center">Government Departments</h1>
+      <div className="flex items-center justify-between mb-10">
+  {/* Back Button starts */}
+  <button
+    onClick={() => navigate(-1)}
+    className="text-sm text-white bg-blue-500 px-4 py-2 rounded-md hover:bg-blue-600"
+  >
+    Back
+  </button>
+
+  <h1 className="text-4xl font-bold text-blue-800 absolute left-1/2 transform -translate-x-1/2">
+    Government Departments
+  </h1>
+</div>
+{/*back ends here*/}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {Object.entries(departments).map(([key, dept]) => (
             <div

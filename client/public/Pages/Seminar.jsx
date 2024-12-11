@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Search } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Seminar = () => {
-  
+  const navigate = useNavigate();
   const data = {
     Seminars: [
       { title: 'Tech Innovations 2024', videoUrl: 'https://www.youtube.com/embed/0k8kqjQab90', date: '2024-10-01', location: 'Online' },
@@ -45,6 +46,12 @@ const Seminar = () => {
   return (
     <div className="container mx-auto p-4">
       {/* Navigation buttons */}
+      <button
+          onClick={() => navigate(-1)}
+          className="text-sm text-white bg-blue-500 px-4 py-2 rounded-md hover:bg-blue-600 mr-auto"
+        >
+          Back
+        </button>
       <div className="flex justify-between items-center mb-4">
         <nav className="ml-auto flex space-x-4">
           {navItems.map((item, index) => (

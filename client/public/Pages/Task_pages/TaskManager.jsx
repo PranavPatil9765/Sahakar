@@ -101,7 +101,17 @@ const TaskTable = () => {
 
   return (
     <div className="p-4 sm:p-6 bg-gray-100 min-h-screen">
-      <h1 className="text-xl sm:text-2xl font-bold mb-4">Task List</h1>
+     {/*back changes start */}  <div className="flex items-center mb-4">
+  <button
+    onClick={() => navigate(-1)}
+    className="text-sm text-white bg-blue-500 px-4 py-2 rounded-md hover:bg-blue-600 mr-auto"
+  >
+    Back
+  </button>
+  <h1 className="text-xl sm:text-2xl font-bold text-center flex-grow">
+    Task List
+  </h1>
+</div> {/*Till here changes of back */}
       <div className="bg-white rounded-lg shadow">
         <div className="flex flex-col sm:flex-row justify-between items-center p-4 border-b space-y-2 sm:space-y-0">
           <div className="relative w-full sm:w-auto mb-2 sm:mb-0">

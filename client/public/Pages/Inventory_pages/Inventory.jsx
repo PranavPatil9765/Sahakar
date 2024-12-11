@@ -6,7 +6,12 @@ const Inventory = () => {
 
   return (
     <div className="container mx-auto p-6 h-screen flex flex-col">
-      
+      <button
+          onClick={() => navigate(-1)}
+          className="text-sm text-white bg-blue-500 px-4 py-2 rounded-md hover:bg-blue-600 mr-auto"
+        >
+          Back
+        </button>
       {/* Inventory Header */}
       <div className="flex justify-center items-center mb-4">
         <h1 className="text-4xl font-bold text-black-700">INVENTORY</h1>
